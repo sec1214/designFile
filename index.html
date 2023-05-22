@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" class="rel" />
+
+    <title>The Design File</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div id="backgroundImage">
+          <div id="translucent_div">
+            <div id="image"></div>
+            <div id="title">ODIN</div>
+          </div>
+        </div>
+        <div id="form">
+          <div id="form_header">
+            <div>
+              This is not a real online service! You need something like this in
+              your life to help you realize your deepest dreams. Sign up
+              <span
+                style="
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                    sans-serif;
+                  color: red;
+                "
+                >&nbspNOW &nbsp
+              </span>
+              to get started.
+
+              <div style="padding-top: 1rem">You know you want to.</div>
+            </div>
+          </div>
+          <form
+            onsubmit="return checkPasswordMatch(this)"
+            action="#"
+            method="GET"
+          >
+            <div id="form_input">
+              <label for="first_name">First Name</label>
+              <label for="last_name">Last Name</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="John"
+                required
+              />
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Doe"
+                required
+              />
+
+              <label for="email">Email</label>
+
+              <label for="phone">Phone</label>
+
+              <input
+                title="Please enter a valid email address, example name@webstite.com"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="odin@viking.com"
+                pattern="[A-Za-z0-9._+-]+@+[A-Za-z0-9 -]+\.[a-z]{2,}"
+                required
+              />
+              <input
+                onkeydown="phoneNumberFormatter()"
+                id="phone-number"
+                type="phone"
+                value=""
+                ;
+                name="phone"
+                title="Please enter a valid phone number, example 347-875-4321"
+                placeholder="347-875-4321"
+                required
+              />
+
+              <label for="password">Password</label>
+              <label for="confirm_password">Confirm Password</label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                title="Must be at least 4 characters "
+                pattern="[a-zA-Z0-9]{4,}"
+                required
+              />
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                title="Must be at least 4 characters "
+                pattern="[a-zA-Z0-9]{4,}"
+                required
+              />
+            </div>
+
+            <div id="form_footer">
+              <div id="backgroundImage_footer"></div>
+              <div id="submit_btn">
+                <button type="submit">submit</button>
+              </div>
+              <div id="logIn_btn">
+                Already have an account?
+                <a href="" style="color: white">Log in</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="validation.js"></script>
+  </body>
+</html>
